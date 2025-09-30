@@ -1,1 +1,1 @@
-# kognitiminds_taskno
+# Hostinger Internship Web Project
