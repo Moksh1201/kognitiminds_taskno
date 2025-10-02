@@ -4,9 +4,8 @@ import axios from 'axios'
 import './index.css'
 import App from './App.jsx'
 
-// Set up axios defaults
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
-  ? 'https://your-production-api.com' 
+  ? 'https://hostinger-internship-web-project.onrender.com' 
   : 'http://localhost:3001'
 
 createRoot(document.getElementById('root')).render(

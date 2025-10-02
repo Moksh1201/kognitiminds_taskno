@@ -6,10 +6,9 @@
 
 .main-content {
   flex: 1;
-  min-height: calc(100vh - 140px); /* Adjust based on header/footer height */
+  min-height: calc(100vh - 140px); 
 }
 
-/* Global Styles */
 * {
   box-sizing: border-box;
 }
@@ -29,7 +28,6 @@ body {
   padding: 0 20px;
 }
 
-/* Utility Classes */
 .text-center {
   text-align: center;
 }
@@ -46,7 +44,6 @@ body {
 .mt-4 { margin-top: 1.5rem; }
 .mt-5 { margin-top: 3rem; }
 
-/* Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -93,7 +90,6 @@ body {
   color: white;
 }
 
-/* Form Styles */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -132,7 +128,6 @@ body {
   margin-top: 5px;
 }
 
-/* Loading States */
 .loading {
   display: flex;
   flex-direction: column;
@@ -156,7 +151,6 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 0 15px;

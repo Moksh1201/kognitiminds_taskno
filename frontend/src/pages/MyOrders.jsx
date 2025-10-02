@@ -162,7 +162,7 @@ const MyOrders = () => {
                     <li key={index} className="order-item">
                       <span className="item-name">{item.name}</span>
                       <span className="item-details">
-                        Qty: {item.quantity} × ${item.price}
+                        Qty: {item.quantity} × ₹{item.price}
                       </span>
                     </li>
                   ))}

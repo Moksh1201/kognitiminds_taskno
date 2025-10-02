@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Disallow private routes
+Disallow: /my-orders
+Disallow: /order-tracking
+
+# Allow public pages
+Allow: /
+Allow: /reviews
+Allow: /internships/apply
+Allow: /login
+Allow: /register
+
+# Sitemap location
+Sitemap: https://hostinger-internship-web-project.onrender.com/sitemap.xml
