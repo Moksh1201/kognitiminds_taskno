@@ -10,19 +10,17 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Security headers
 app.use(helmet({
-  contentSecurityPolicy: false, // Disable for development - enable in production
+  contentSecurityPolicy: false, 
   crossOriginEmbedderPolicy: false
 }));
 
-// Rate limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000, 
+  max: 100, 
   message: 'Too many requests from this IP, please try again later.',
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  standardHeaders: true, 
+  legacyHeaders: false, 
 });
 app.use('/api/', limiter);
 
@@ -58,7 +56,6 @@ const userSchema = new mongoose.Schema({
 });
 const User = mongoose.model('User', userSchema);
 
-// Order Schema
 const orderSchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
   orderNumber: { type: String, required: true, unique: true },
@@ -176,7 +173,6 @@ app.post('/api/auth/login', async (req, res) => {
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });
-// Order Routes
 app.get('/api/orders', authenticateToken, async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.user.userId }).sort({ createdAt: -1 });
@@ -207,7 +203,6 @@ app.post('/api/orders', authenticateToken, async (req, res) => {
   try {
     const { items, totalAmount, shippingAddress } = req.body;
     
-    // Generate order number
     const orderNumber = 'ORD-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5).toUpperCase();
     
     const order = new Order({
@@ -237,7 +232,6 @@ app.post('/api/internships/apply', async (req, res) => {
 
 app.get('/api/internships/applications', authenticateToken, async (req, res) => {
   try {
-    // Only admins can view applications
     const user = await User.findById(req.user.userId);
     if (user.role !== 'admin') {
       return res.status(403).json({ message: 'Access denied' });
