@@ -7,7 +7,7 @@ import App from './App.jsx'
 // Set up axios defaults
 axios.defaults.baseURL = process.env.NODE_ENV === 'production' 
   ? 'https://your-production-api.com' 
-  : 'http://localhost:5000'
+  : 'http://localhost:3001'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
