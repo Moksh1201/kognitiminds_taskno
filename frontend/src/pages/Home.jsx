@@ -5,7 +5,6 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home">
-      {/* Hero Section */}
       <section className="hero">
         <div className="container">
           <div className="hero-content">
@@ -31,7 +30,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="features">
         <div className="container">
           <h2>Why Choose Hostinger?</h2>
@@ -81,7 +79,7 @@ const Home = () => {
                 <li><CheckCircle size={16} /> Daily backups</li>
                 <li><CheckCircle size={16} /> 24/7 support</li>
               </ul>
-              <div className="service-price">Starting at $1.99/month</div>
+              <div className="service-price">Starting at ₹99.99/month</div>
             </div>
             <div className="service-card featured">
               <div className="popular-badge">Most Popular</div>
@@ -92,7 +90,7 @@ const Home = () => {
                 <li><CheckCircle size={16} /> Scalable performance</li>
                 <li><CheckCircle size={16} /> Advanced security</li>
               </ul>
-              <div className="service-price">Starting at $3.95/month</div>
+              <div className="service-price">Starting at ₹199.95/month</div>
             </div>
             <div className="service-card">
               <h3>Cloud Hosting</h3>
@@ -102,7 +100,7 @@ const Home = () => {
                 <li><CheckCircle size={16} /> High availability</li>
                 <li><CheckCircle size={16} /> Pay-as-you-go</li>
               </ul>
-              <div className="service-price">Starting at $9.99/month</div>
+              <div className="service-price">Starting at ₹999.99/month</div>
             </div>
           </div>
         </div>
@@ -124,7 +122,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> 
       </section>
     </div>
   );

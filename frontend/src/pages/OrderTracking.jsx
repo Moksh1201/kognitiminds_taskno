@@ -12,55 +12,55 @@ const OrderTracking = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // Mock order data
       const mockOrder = {
-        orderNumber: data.orderNumber,
-        status: 'shipped',
-        items: [
-          { name: 'Web Hosting Plan - Premium', quantity: 1, price: 9.99 },
-          { name: 'SSL Certificate', quantity: 1, price: 0 }
-        ],
-        totalAmount: 9.99,
-        shippingAddress: {
-          street: '123 Main St',
-          city: 'New York',
-          state: 'NY',
-          zipCode: '10001',
-          country: 'USA'
-        },
-        trackingNumber: 'TRK123456789',
-        createdAt: '2024-01-15T10:30:00Z',
-        updatedAt: '2024-01-18T14:20:00Z',
-        trackingHistory: [
-          {
-            status: 'pending',
-            message: 'Order received and payment confirmed',
-            timestamp: '2024-01-15T10:30:00Z',
-            completed: true
-          },
-          {
-            status: 'processing',
-            message: 'Order is being prepared for shipment',
-            timestamp: '2024-01-16T09:15:00Z',
-            completed: true
-          },
-          {
-            status: 'shipped',
-            message: 'Order has been shipped and is in transit',
-            timestamp: '2024-01-18T14:20:00Z',
-            completed: true
-          },
-          {
-            status: 'delivered',
-            message: 'Order delivered successfully',
-            timestamp: null,
-            completed: false
-          }
-        ]
-      };
+  orderNumber: data.orderNumber,
+  status: 'shipped',
+  items: [
+    { name: 'Domain Registration - .in', quantity: 1, price: 699 },   
+    { name: 'Web Hosting Plan - Premium', quantity: 1, price: 2999 }, 
+    { name: 'SSL Certificate', quantity: 1, price: 0 }                
+  ],
+  totalAmount: 3698, 
+  shippingAddress: {
+    street: '221B Baker Street',
+    city: 'Bengaluru',
+    state: 'Karnataka',
+    zipCode: '560001',
+    country: 'India'
+  },
+  trackingNumber: 'IND123456789',
+  createdAt: '2024-09-15T10:30:00Z',
+  updatedAt: '2024-09-18T14:20:00Z',
+  trackingHistory: [
+    {
+      status: 'pending',
+      message: 'Order received and payment confirmed',
+      timestamp: '2024-09-15T10:30:00Z',
+      completed: true
+    },
+    {
+      status: 'processing',
+      message: 'Order is being prepared for shipment',
+      timestamp: '2024-09-16T09:15:00Z',
+      completed: true
+    },
+    {
+      status: 'shipped',
+      message: 'Order has been shipped from Delhi warehouse',
+      timestamp: '2024-09-18T14:20:00Z',
+      completed: true
+    },
+    {
+      status: 'delivered',
+      message: 'Order delivered successfully in Bengaluru',
+      timestamp: null,
+      completed: false
+    }
+  ]
+};
+
       
       setOrder(mockOrder);
       toast.success('Order found!');
@@ -153,7 +153,7 @@ const OrderTracking = () => {
               </div>
               <div className="info-item">
                 <span className="label">Total Amount:</span>
-                <span className="value">${order.totalAmount}</span>
+                <span className="value">₹{order.totalAmount}</span>
               </div>
               <div className="info-item">
                 <span className="label">Tracking Number:</span>
@@ -169,7 +169,7 @@ const OrderTracking = () => {
                 <div key={index} className="item">
                   <span className="item-name">{item.name}</span>
                   <span className="item-quantity">Qty: {item.quantity}</span>
-                  <span className="item-price">${item.price}</span>
+                  <span className="item-price">₹{item.price}</span>
                 </div>
               ))}
             </div>

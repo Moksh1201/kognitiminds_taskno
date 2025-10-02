@@ -26,7 +26,7 @@ const MyOrders = () => {
               { name: 'Web Hosting Plan - Premium', quantity: 1, price: 9.99 },
               { name: 'SSL Certificate', quantity: 1, price: 0 }
             ],
-            totalAmount: 9.99,
+            totalAmount: 99.99,
             createdAt: '2024-01-15T10:30:00Z',
             updatedAt: '2024-01-20T16:45:00Z',
             trackingNumber: 'TRK123456789'
@@ -36,10 +36,10 @@ const MyOrders = () => {
             orderNumber: 'ORD-20240110-002',
             status: 'shipped',
             items: [
-              { name: 'Domain Registration - .com', quantity: 1, price: 12.99 },
-              { name: 'Privacy Protection', quantity: 1, price: 2.99 }
+              { name: 'Domain Registration - .com', quantity: 1, price: 122.99 },
+              { name: 'Privacy Protection', quantity: 1, price: 22.99 }
             ],
-            totalAmount: 15.98,
+            totalAmount: 152.98,
             createdAt: '2024-01-10T14:20:00Z',
             updatedAt: '2024-01-18T09:30:00Z',
             trackingNumber: 'TRK987654321'
@@ -49,9 +49,9 @@ const MyOrders = () => {
             orderNumber: 'ORD-20240105-003',
             status: 'processing',
             items: [
-              { name: 'VPS Hosting Plan', quantity: 1, price: 19.99 }
+              { name: 'VPS Hosting Plan', quantity: 1, price: 199.99 }
             ],
-            totalAmount: 19.99,
+            totalAmount: 199.99,
             createdAt: '2024-01-05T16:45:00Z',
             updatedAt: '2024-01-15T11:20:00Z',
             trackingNumber: null

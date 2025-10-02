@@ -47,18 +47,18 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 (000) 1234567</span>
               </div>
               <div className="contact-item">
                 <MapPin size={16} />
-                <span>123 Business St, City, State 12345</span>
+                <span>66 Banglore, India</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Hostinger. All rights reserved.</p>
+          <p>&copy; 2025 Hostinger. All rights reserved.</p>
           <div className="footer-links">
             <Link to="/">Privacy Policy</Link>
             <Link to="/">Terms of Service</Link>

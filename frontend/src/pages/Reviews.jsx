@@ -19,62 +19,61 @@ const Reviews = () => {
   const fetchReviews = async () => {
     setIsLoading(true);
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // Mock reviews data
-      const mockReviews = [
-        {
-          _id: '1',
-          userName: 'Sarah Johnson',
-          rating: 5,
-          title: 'Excellent hosting service!',
-          comment: 'I\'ve been using Hostinger for over 2 years now and I couldn\'t be happier. The uptime is fantastic, customer support is responsive, and the pricing is very competitive. Highly recommended!',
-          verified: true,
-          createdAt: '2024-01-10T10:30:00Z',
-          helpful: 12
-        },
-        {
-          _id: '2',
-          userName: 'Mike Chen',
-          rating: 4,
-          title: 'Great value for money',
-          comment: 'The hosting plans are very affordable and the performance is solid. I\'ve had a few minor issues but the support team always resolved them quickly. Good overall experience.',
-          verified: true,
-          createdAt: '2024-01-08T14:20:00Z',
-          helpful: 8
-        },
-        {
-          _id: '3',
-          userName: 'Emily Rodriguez',
-          rating: 5,
-          title: 'Perfect for beginners',
-          comment: 'As someone new to web development, Hostinger made it so easy to get started. The control panel is intuitive and the tutorials are very helpful. Love it!',
-          verified: true,
-          createdAt: '2024-01-05T16:45:00Z',
-          helpful: 15
-        },
-        {
-          _id: '4',
-          userName: 'David Kim',
-          rating: 3,
-          title: 'Decent but room for improvement',
-          comment: 'The service is okay but I\'ve experienced some downtime issues. The support is helpful but response times could be faster. Overall, it\'s a decent option for the price.',
-          verified: true,
-          createdAt: '2024-01-03T09:15:00Z',
-          helpful: 3
-        },
-        {
-          _id: '5',
-          userName: 'Lisa Thompson',
-          rating: 5,
-          title: 'Outstanding customer support',
-          comment: 'What sets Hostinger apart is their customer support. They\'re knowledgeable, friendly, and always go the extra mile to help. The hosting itself is also very reliable.',
-          verified: true,
-          createdAt: '2024-01-01T11:30:00Z',
-          helpful: 20
-        }
-      ];
+const mockReviews = [
+  {
+    _id: '1',
+    userName: 'Rahul Mehta',
+    rating: 5,
+    title: 'Very good hosting',
+    comment: 'I have been using this service for 1 year. No big issues. Speed is fine and support replies on time.',
+    verified: true,
+    createdAt: '2024-02-10T10:30:00Z',
+    helpful: 9
+  },
+  {
+    _id: '2',
+    userName: 'Priya Sharma',
+    rating: 4,
+    title: 'Affordable and useful',
+    comment: 'The plan price is reasonable. Works fine for my small business website. Faced a small issue but it was solved quickly.',
+    verified: true,
+    createdAt: '2024-02-08T14:20:00Z',
+    helpful: 6
+  },
+  {
+    _id: '3',
+    userName: 'Amit Patel',
+    rating: 5,
+    title: 'Good for beginners',
+    comment: 'I am not very technical but setup was easy. The panel is simple and there are guides available.',
+    verified: true,
+    createdAt: '2024-02-05T16:45:00Z',
+    helpful: 11
+  },
+  {
+    _id: '4',
+    userName: 'Sneha Reddy',
+    rating: 3,
+    title: 'Okay but can improve',
+    comment: 'Hosting is okay but sometimes site loads slowly. Support is fine but not very fast.',
+    verified: true,
+    createdAt: '2024-02-03T09:15:00Z',
+    helpful: 4
+  },
+  {
+    _id: '5',
+    userName: 'Vikram Singh',
+    rating: 5,
+    title: 'Support is helpful',
+    comment: 'The best thing is their support. I asked many questions and they explained properly. Hosting is reliable also.',
+    verified: true,
+    createdAt: '2024-02-01T11:30:00Z',
+    helpful: 13
+  }
+];
+
       
       setReviews(mockReviews);
     } catch (error) {
@@ -92,7 +91,6 @@ const Reviews = () => {
 
     setIsSubmitting(true);
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       const newReview = {
