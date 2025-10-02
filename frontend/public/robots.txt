@@ -14,3 +14,4 @@ Allow: /register
 
 # Sitemap location
 Sitemap: https://hostinger-internship-web-project.onrender.com/sitemap.xml
+
